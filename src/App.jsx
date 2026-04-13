@@ -3,9 +3,24 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import MyComponent from './assets/components/learn/MyComponent'
+import {SecondeComponent, ThridComponent} from './assets/components/learn/SecondComponent'
 
-function App() {
+
+const App = () => {
   const [count, setCount] = useState(0)
+
+  // function myFunction() {
+  //   alert('Xin chào Hoàng Năng Hưng video')
+  // }
+
+  // myFunction();
+
+  // const myFunction = () => {
+  //   console.log('Xin chào Hoàng Năng Hưng video');
+  // }
+
+  // myFunction();
 
   return (
     <>
@@ -17,6 +32,12 @@ function App() {
         </div>
         <div>
           <h1>Xin chào Hoàng Năng Hưng video</h1>
+          <MyComponent/>
+          <SecondeComponent/>
+          <ThridComponent/>
+          
+
+        
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
