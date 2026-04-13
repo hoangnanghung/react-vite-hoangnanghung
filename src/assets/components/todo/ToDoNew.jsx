@@ -4,11 +4,13 @@ const ToDoNew = (props) => {
     const { addNewToDo } = props;
     
     // sử dụng useState hook trên component chính trên file App.jsx 
-    const [valueInput, setValueInput] = useState("abc");
+    const [valueInput, setValueInput] = useState("");
 
 
     const handleClick = () => {
         addNewToDo(valueInput);
+        setValueInput("");
+        
     }
 
     const handleOnChange = (name) => {
@@ -29,9 +31,9 @@ const ToDoNew = (props) => {
 
     return (
         <div className="todo-form">
-            <input onChange={(event) => handleOnChange(event.target.value)} type="text" placeholder="Enter......" />
+            <input onChange={(event) => handleOnChange(event.target.value)} value={valueInput} type="text" placeholder="Enter......" />
             <button onClick={handleClick}>Add</button>
-            <div>My text input is: {valueInput} </div>
+            {/* <div>My text input is: {valueInput} </div> */}
         </div>
     )
 
