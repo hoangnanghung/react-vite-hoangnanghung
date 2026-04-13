@@ -20,8 +20,11 @@ const ToDoData = (props) => {
           <div>Age {age}</div>
           <div>Learning</div>
           <div>Watch</div>
+          <div>
+            {JSON.stringify(props.toDoList)}
+          </div>
         </div>
-        
+
     )
 }
 

@@ -1,13 +1,18 @@
+import { useState } from "react";
 
 const ToDoNew = (props) => {
     const { addNewToDo } = props;
+    
+    // sử dụng useState hook trên component chính trên file App.jsx 
+    const [valueInput, setValueInput] = useState("abc");
+
 
     const handleClick = () => {
-        alert("handleClick");
+        
     }
 
     const handleOnChange = (name) => {
-        console.log(name);
+        setValueInput(name);
     }
     
     /* cách code 1 */ 
@@ -26,6 +31,7 @@ const ToDoNew = (props) => {
         <div className="todo-form">
             <input onChange={(event) => handleOnChange(event.target.value)} type="text" placeholder="Enter......" />
             <button onClick={handleClick}>Add</button>
+            <div>My text input is: {valueInput} </div>
         </div>
     )
 
