@@ -1,15 +1,31 @@
+import { NavLink } from 'react-router-dom';
 import './header.css';
 
 const Header = () => {
-    return(
-
-        <ul>
-            <li><Link  to="/user">User</Link></li>
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/register">Register</Link></li>
-            <li><Link to="/product">Product</Link></li>
-        </ul>
-    )
+  return (
+    <ul>
+      <li>
+        <NavLink to="/user" className={({ isActive }) => isActive ? 'active' : ''}>
+          User
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/login" className={({ isActive }) => isActive ? 'active' : ''}>
+          Login
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/register" className={({ isActive }) => isActive ? 'active' : ''}>
+          Register
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/product" className={({ isActive }) => isActive ? 'active' : ''}>
+          Product
+        </NavLink>
+      </li>
+    </ul>
+  )
 }
 
 export default Header
