@@ -4,10 +4,10 @@ const Header = () => {
     return(
 
         <ul>
-            <li><a href="/user">User</a></li>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/register">Register</a></li>
-            <li><a href="/product">Product</a></li>
+            <li><Link  to="/user">User</Link></li>
+            <li><Link to="/login">Login</Link></li>
+            <li><Link to="/register">Register</Link></li>
+            <li><Link to="/product">Product</Link></li>
         </ul>
     )
 }
