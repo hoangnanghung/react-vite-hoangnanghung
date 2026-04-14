@@ -3,25 +3,38 @@ import { createRoot } from 'react-dom/client'
 
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import LoginPage from './page/login.jsx'
+import UserPage from './page/user.jsx'
+import RegisterPage from './page/register.jsx'
+import ProductPage from './page/product.jsx'
+import AppLayout from './components/layout/AppLayout.jsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
-  },
-  {
-    path: '/login',
-    element: <div>Login Page</div>,
-  },
-
-  {
-    path: '/register',
-    element: <div>Register Page</div>,
-  },
-
-  {
-    path: '/product',
-    element: <div>Product Page</div>,
+    element: <AppLayout />,
+    children: [
+      {
+        index: true,
+        element: <App />,
+      },
+      {
+        path: 'login',
+        element: <LoginPage />,
+      },
+      {
+        path: 'user',
+        element: <UserPage />,
+      },
+      {
+        path: 'register',
+        element: <RegisterPage />,
+      },
+      {
+        path: 'product',
+        element: <ProductPage />,
+      },
+    ],
   }
 ])
 

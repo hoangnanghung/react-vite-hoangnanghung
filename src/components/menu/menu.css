@@ -1,0 +1,35 @@
+.app-layout {
+  min-height: 100vh;
+  padding: 24px;
+  background: #f6f8fb;
+}
+
+.app-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.menu-link {
+  padding: 10px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #1f2937;
+  background: #e5e7eb;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.menu-link:hover {
+  background: #d1d5db;
+}
+
+.menu-link.active {
+  background: #111827;
+  color: #ffffff;
+}
+
+.page-content {
+  max-width: 960px;
+}

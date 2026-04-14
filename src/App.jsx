@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import ToDoNew from './assets/components/todo/ToDoNew'
+import ToDoNew from './components/todo/ToDoNew'
 import img1 from './assets/img1.png'
-import './assets/components/todo/todo.css'
-import ToDoData from './assets/components/todo/ToDoData'
+import './components/todo/todo.css'
+import ToDoData from './components/todo/ToDoData'
 
 const App = () => {
 
