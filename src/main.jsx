@@ -6,13 +6,16 @@ import App from './App.jsx'
 import LoginPage from './page/login.jsx'
 import UserPage from './page/user.jsx'
 import RegisterPage from './page/register.jsx'
-import ProductPage from './page/product.jsx'
+import BookPage from './page/book.jsx'
 import ToDoApp from './components/todo/ToDoApp.jsx'
+import ErrorPage from './page/error.jsx'
+import NotFoundPage from './page/not-found.jsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -31,8 +34,12 @@ const router = createBrowserRouter([
         element: <RegisterPage />,
       },
       {
-        path: 'product',
-        element: <ProductPage />,
+        path: 'book',
+        element: <BookPage />,
+      },
+      {
+        path: '*',
+        element: <NotFoundPage />,
       },
     ],
   },

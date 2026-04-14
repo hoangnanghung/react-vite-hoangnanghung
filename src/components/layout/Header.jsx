@@ -23,7 +23,7 @@ const Header = () => {
             </li>
             <li>
                 <NavLink to="/product" className={({ isActive }) => isActive ? 'active' : ''}>
-                Product
+                Book
                 </NavLink>
             </li>
             </ul>
