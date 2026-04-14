@@ -1,5 +1,16 @@
+import UserTable from "../components/user/user";
+import UserForm from "../components/user/user.form";
+
 const UserPage = () => {
-    return(<h1>User</h1>)
+    return(
+        <>
+          <div>
+            <UserForm />
+            <UserTable />
+          </div>
+        
+        </>
+    )
 }
 
 export default UserPage;
