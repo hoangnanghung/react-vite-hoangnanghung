@@ -21,7 +21,7 @@ const ToDoData = (props) => {
           {toDoList.map((item) => {
             return (
               <div key={item.id}>
-                <div className="toDoItem">
+                <div className="toDoItem ">
                     {item.name}
                     <button>Delete</button>
                 </div>
@@ -30,9 +30,9 @@ const ToDoData = (props) => {
             );
           })}
           
-          <div>
+          {/* <div>
             {JSON.stringify(props.toDoList)}
-          </div>
+          </div> */}
         </div>
 
     )

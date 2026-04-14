@@ -7,21 +7,21 @@ import ToDoData from './assets/components/todo/ToDoData'
 const App = () => {
 
   const [toDoList, setTodos] = useState([
-    { id: 1, name: "Learn React" },
-    { id: 2, name: "Learn Vue" },
-    { id: 3, name: "Learn Angular" },
-    { id: 4, name: "Learn Node" },
-    { id: 5, name: "Learn Express" },
-    { id: 6, name: "Learn MongoDB" },
-    { id: 7, name: "Learn MySQL" },
+    // { id: 1, name: "Learn React" },
+    // { id: 2, name: "Learn Vue" },
+    // { id: 3, name: "Learn Angular" },
+    // { id: 4, name: "Learn Node" },
+    // { id: 5, name: "Learn Express" },
+    // { id: 6, name: "Learn MongoDB" },
+    // { id: 7, name: "Learn MySQL" },
   ]);
 
-  const testName = "Hoàng Năng Hưng";
-  const age = 25;
-  const data = {
-    address: "Ha Noi",
-    country: "Viet Nam"
-  }
+  // const testName = "Hoàng Năng Hưng";
+  // const age = 25;
+  // const data = {
+  //   address: "Ha Noi",
+  //   country: "Viet Nam"
+  // }
 
 
   function randomIntFromInterval(min, max) { // min and max included 
@@ -47,17 +47,37 @@ const App = () => {
         <h1 className="title">Todo list</h1>
 
         <ToDoNew addNewToDo={addNewToDo} />
+        
+        {/* Cách 1 */}
 
-        <ToDoData
-          name={testName}
-          age={age}
-          data={data}
-          toDoList={toDoList}
-        />
+        {/* {toDoList.length > 0 &&
+         
+            <ToDoData
+            // name={testName}
+            // age={age}
+            // data={data}
+            toDoList={toDoList}
+          />
+        }
+        
+        
+        {toDoList.length === 0 && 
+          <div className="image-box">
+            <img src={img1} style={{ width: "50%", margin: "0 auto" }} alt="" />
+          </div>
+        } */}
 
-        <div className="image-box">
-          <img src={img1} style={{ width: "50%", margin: "0 auto" }} alt="" />
-        </div>
+        {/* // cách 2 */}
+
+        {toDoList.length > 0
+          ? <ToDoData toDoList={toDoList} />
+          : <div className="image-box">
+              <img src={img1} style={{ width: "50%", margin: "0 auto" }} alt="" />
+            </div>
+        }
+
+
+        
       </div>
     </>
   )
