@@ -4,7 +4,7 @@ const ToDoData = (props) => {
     // console.log(props);
     // cách code 1
     // const {name, age, data} = props; // destructuring object props 
-    const {toDoList} = props;
+    const {toDoList, deleteToDo} = props;
     // cách code 2
     // const name = props.name;
     // const age = props.age;
@@ -23,7 +23,8 @@ const ToDoData = (props) => {
               <div key={item.id}>
                 <div className="toDoItem ">
                     {item.name}
-                    <button>Delete</button>
+                    
+                    <button onClick={() => deleteToDo(item.id)}>Delete</button>
                 </div>
                 
               </div>

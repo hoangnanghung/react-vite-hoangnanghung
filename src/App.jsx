@@ -28,17 +28,18 @@ const App = () => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  const rndInt = randomIntFromInterval(1, 1000000000);
- 
-
-
   const addNewToDo = (name) => {
     const newToDo = {
-      id: rndInt,
+      id: randomIntFromInterval(1, 1000000000),
       name: name
     };
 
     setTodos([...toDoList, newToDo]);
+  }
+
+  const deleteToDo = (id) => {
+    const updatedTodos = toDoList.filter((item) => item.id !== id);
+    setTodos(updatedTodos);
   }
 
   return (
@@ -70,7 +71,7 @@ const App = () => {
         {/* // cách 2 */}
 
         {toDoList.length > 0
-          ? <ToDoData toDoList={toDoList} />
+          ? <ToDoData toDoList={toDoList} deleteToDo={deleteToDo} />
           : <div className="image-box">
               <img src={img1} style={{ width: "50%", margin: "0 auto" }} alt="" />
             </div>
