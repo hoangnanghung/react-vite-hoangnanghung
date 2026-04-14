@@ -7,6 +7,7 @@ import Header from './components/layout/header'
 import Footer from './components/layout/Footer'
 import { Outlet } from 'react-router-dom'
 
+
 const App = () => {
 
   const [toDoList, setTodos] = useState([
@@ -47,46 +48,10 @@ const App = () => {
 
   return (
     <>
-    <Outlet />
     <Header />
-      <div className="container">
-        <h1 className="title">Todo list</h1>
-
-        <ToDoNew addNewToDo={addNewToDo} />
-        
-        {/* Cách 1 */}
-
-        {/* {toDoList.length > 0 &&
-         
-            <ToDoData
-            // name={testName}
-            // age={age}
-            // data={data}
-            toDoList={toDoList}
-          />
-        }
-        
-        
-        {toDoList.length === 0 && 
-          <div className="image-box">
-            <img src={img1} style={{ width: "50%", margin: "0 auto" }} alt="" />
-          </div>
-        } */}
-
-        {/* // cách 2 */}
-
-        {toDoList.length > 0
-          ? <ToDoData toDoList={toDoList} deleteToDo={deleteToDo} />
-          : <div className="image-box">
-              <img src={img1} style={{ width: "50%", margin: "0 auto" }} alt="" />
-            </div>
-        }
-
-
-        
-      </div>
-      
-      <Footer />
+    <Outlet />
+    
+    <Footer />
     </>
   )
 }
