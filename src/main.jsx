@@ -7,35 +7,28 @@ import LoginPage from './page/login.jsx'
 import UserPage from './page/user.jsx'
 import RegisterPage from './page/register.jsx'
 import ProductPage from './page/product.jsx'
-import AppLayout from './components/layout/AppLayout.jsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <AppLayout />,
-    children: [
-      {
-        index: true,
-        element: <App />,
-      },
-      {
-        path: 'login',
-        element: <LoginPage />,
-      },
-      {
-        path: 'user',
-        element: <UserPage />,
-      },
-      {
-        path: 'register',
-        element: <RegisterPage />,
-      },
-      {
-        path: 'product',
-        element: <ProductPage />,
-      },
-    ],
-  }
+    element: <App />,
+  },
+  {
+    path: '/login',
+    element: <LoginPage />,
+  },
+  {
+    path: '/user',
+    element: <UserPage />,
+  },
+  {
+    path: '/register',
+    element: <RegisterPage />,
+  },
+  {
+    path: '/product',
+    element: <ProductPage />,
+  },
 ])
 
 const root = document.getElementById('root')

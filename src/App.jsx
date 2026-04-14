@@ -3,6 +3,8 @@ import ToDoNew from './components/todo/ToDoNew'
 import img1 from './assets/img1.png'
 import './components/todo/todo.css'
 import ToDoData from './components/todo/ToDoData'
+import Header from './components/layout/header'
+import Footer from './components/layout/Footer'
 
 const App = () => {
 
@@ -44,6 +46,7 @@ const App = () => {
 
   return (
     <>
+    <Header />
       <div className="container">
         <h1 className="title">Todo list</h1>
 
@@ -80,6 +83,7 @@ const App = () => {
 
         
       </div>
+      <Footer />
     </>
   )
 }
