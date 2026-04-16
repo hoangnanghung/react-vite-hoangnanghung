@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import js from "@eslint/js";
 import globals from "globals";
 import react from "eslint-plugin-react";
@@ -8,10 +9,28 @@ export default [
   {ignores: ["dist"]},
   {
     files: ["**/*.{js,jsx}"],
+=======
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import { defineConfig, globalIgnores } from 'eslint/config'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{js,jsx}'],
+    extends: [
+      js.configs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
+>>>>>>> 08d938356e091324cd4b8c03edf627c2adac5ce7
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
       parserOptions: {
+<<<<<<< HEAD
         ecmaVersion: "latest",
         ecmaFeatures: {jsx: true},
         sourceType: "module",
@@ -36,3 +55,15 @@ export default [
     },
   },
 ];
+=======
+        ecmaVersion: 'latest',
+        ecmaFeatures: { jsx: true },
+        sourceType: 'module',
+      },
+    },
+    rules: {
+      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+    },
+  },
+])
+>>>>>>> 08d938356e091324cd4b8c03edf627c2adac5ce7
